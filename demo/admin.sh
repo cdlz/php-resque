@@ -1,13 +1,14 @@
 #!/bin/bash
-export APP_INCLUDE=resque/require.php
+#export APP_INCLUDE=resque/require.php
 export QUEUE=*
-export COUNT=1
+export COUNT=5
 export VVERBOSE=1 # for debugging
 export REDIS_BACKEND=127.0.0.1:6379
 # . /etc/rc.d/init.d/functions
  
+#QUEUE=*  COUNT=5 VVERBOSE=1 php resque.php
 start() {
-  /usr/bin/php ./resque.php
+   /usr/bin/php ./resque.php
 }
  
 stop() {
